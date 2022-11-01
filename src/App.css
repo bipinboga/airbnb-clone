@@ -1,38 +1,306 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');       
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  height: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.browse{
+  height: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.burger{
+  height: 16px;
+}
+
+.person{
+  height: 26px;
+}
+
+.header{
+  height: 5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.left-div{
+  margin-left: 10rem;
+  width: 20rem;
+}
+
+.right-div{
+  margin-right: 10rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.right-div p, .browse {
+  margin-left: 15px;
+}
+.burger-person{
+  margin-left: 15px;
+  width: 5rem;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 35px;
+  padding: 5px 12px 5px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content hr{
+  border: 1px solid #e5e5e5;
+}
+
+.section-one{
+  margin-left: 10rem;
+}
+
+.section-one h1{
+  margin-top: 2rem;
+}
+
+.guide{
+  margin-top: 2rem;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guideOne img{
+  height: 330px;
+  width: 544px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.textOne {
   color: white;
+  position: absolute;
+  top: 205px;
+  left: 180px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.textOne h3{
+  font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.guideTwo img{
+  height: 330px;
+  width: 544px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.textTwo {
+  color: white;
+  position: absolute;
+  top: 205px;
+  left: 745px;
+  cursor: pointer;
+}
+
+.textTwo h3{
+  font-size: 25px;
+}
+
+.guideThree img{
+  height: 330px;
+  width: 544px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.textThree {
+  color: white;
+  position: absolute;
+  top: 205px;
+  left: 1310px;
+  cursor: pointer;
+}
+
+.textThree h3{
+  font-size: 25px;
+}
+
+.options{
+  margin-top: 1rem;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.normalOpt {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 12px 5px 12px;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 20px;
+}
+
+.bgGreyOpt{
+  background-color: rgb(212, 212, 212);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 12px 5px 12px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 20px;
+}
+
+.section-head{
+  margin-left: 10rem;
+  margin-top: 2rem;
+  font-size: 23px;
+}
+
+.inner-carousel{
+  display: flex;
+}
+
+.carousel{
+  margin-left: 10rem;
+  width: 85%;
+  cursor: grab;
+  overflow: hidden;
+}
+
+.item{
+  padding: 20px;
+}
+
+.item p{
+  margin: 5px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.item img{
+  height: 22rem;
+  width: 17rem;
+  pointer-events: none;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .left-div {
+
+   margin-left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  .right-div{
+    display: none;
+  }
+
+  .section-one{
+    margin-left: 2rem;
+  }
+
+  .section-one h1 {
+    /* margin-left: 2rem; */
+    text-align: center;
+  }
+
+  .guide{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .guideOne, .guideTwo, .guideThree{
+    margin: 10px;
+  }
+
+  .guideOne img, .guideTwo img, .guideThree img{
+    height: 230px;
+    width: 344px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .textOne {
+    color: white;
+    position: absolute;
+    top: 205px;
+    left: 80px;
+    cursor: pointer;
+  }
+
+  .textOne h3, .textTwo h3, .textThree h3{
+    font-size: 20px;
+  }
+
+  .textTwo {
+    color: white;
+    position: absolute;
+    top: 460px;
+    left: 80px;
+    cursor: pointer;
+  }
+
+  .textThree {
+    color: white;
+    position: absolute;
+    top: 715px;
+    left: 80px;
+    cursor: pointer;
+  }
+  .options {
+    margin-top: 1rem;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .options p{
+    margin: 4px;
+  }
+
+  .section-two{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-head {
+    text-align: center;
+    margin:  2rem;
+    font-size: 23px;
+  }
+
+  .carousel {
+    margin-left: 0;
+    width: 85%;
+    cursor: grab;
+    overflow: hidden;
   }
 }
